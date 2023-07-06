@@ -2,10 +2,17 @@
 
 @section('container')
     <article>
-        <h2>{{ $post["title"] }}</h2>
-        <h5>{{ $post["author"] }}</h5>
-        <p>{{$post["body"]}}</p>
+        <h2>{{ $post->title }}</h2>
+        {{-- <h5>{{ $post->author }}</h5> --}}
+        {!! $post->body !!}
     </article>
 
     <a href="/posts">Back to Posts</a>
 @endsection
+
+{{-- Post::create([
+    'title' =>  'Judul Ketiga',
+    'slug' => 'judul-ketiga',
+    'excerpt' => 'Lorem ipsum ketiga',
+    'body' => '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda adipisci quaerat accusamus quisquam porro, culpa, libero cum illo sequi nostrum architecto est voluptates sunt quis? Ullam eos magni libero ex voluptatum.</p><p>Veniam accusamus mollitia autem cumque provident nesciunt at. Hic repudiandae sed rerum! Et obcaecati nulla reiciendis ab praesentium, ut numquam quidem? Quod porro voluptatibus velit numquam! Consequatur eveniet eum quis commodi vero rem nesciunt perspiciatis minima alias ullam, quas aliquam ipsum, repudiandae recusandae, maxime eos error unde.</p><p>Sunt porro facere similique nam illo pariatur alias velit sed, quas sequi consectetur quae mollitia eaque, magni a error aut illum veritatis fuga repellendus reprehenderit tempore possimus et.</p><p>Aperiam ipsa necessitatibus praesentium earum dolorem labore maiores, possimus dicta aliquam, quo esse accusantium porro repellendus dolorum doloremque veniam impedit fuga perferendis? Aut, maiores adipisci corrupti delectus neque voluptatem excepturi quidem libero, inventore sapiente nobis consectetur obcaecati blanditiis tenetur, debitis qui hic nihil deserunt?</p>'
+]) --}}
