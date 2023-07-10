@@ -7,7 +7,7 @@
         <div class="row">
             @foreach ($categories as $category)
                 <div class="col-md-4">
-                    <a href="/categories/{{ $category->slug }}">
+                    <a href="/posts?category={{ $category->slug }}">
                         <div class="card bg-dark text-white">
                             <img src="https://random.imagecdn.app/500/500" class="card-img" alt="...">
                             <div class="card-img-overlay d-flex align-items-center p-0">
