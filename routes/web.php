@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DataController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -61,3 +62,7 @@ Route::get('/dashboard', function(){
 
 Route::get('dashboard/posts/checkSlug', [DashboardPostController::class, 'checkSlug'])->middleware('auth');
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+
+// chatGPT
+Route::get('/explode', [DataController::class, 'index']);
+Route::post('/submit', [DataController::class, 'submit']);
