@@ -9,7 +9,13 @@
                         class="text-decoration-none">{{ $post->author->name }}</a> in <a
                         href="/posts?category={{ $post->category->slug }}">{{ $post->category->name }}</a></p>
 
-                <img src="https://random.imagecdn.app/1200/400" alt="" class="img-fluid">
+                @if ($post->image)
+                    <div style="max-height: 400px; overflow:hidden">
+                        <img src="{{ asset('storage/' . $post->image) }}" alt="" class="img-fluid">
+                    </div>
+                @else
+                    <img src="https://random.imagecdn.app/1200/400" alt="" class="img-fluid">
+                @endif
 
                 <article class="my-3 fs-5">
                     {!! $post->body !!}
